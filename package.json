@@ -1,0 +1,50 @@
+{
+  "name": "@dashkite/genie-listen",
+  "version": "0.0.0",
+  "description": "Listen for build events",
+  "keywords": [],
+  "homepage": "https://github.com/dashkite/genie-listen#readme",
+  "bugs": {
+    "url": "https://github.com/dashkite/genie-listen/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dashkite/genie-listen.git"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "contributors": [
+    "Dan Yoder <dan@dashkite.com>",
+    "David Harper <david@dashkite.com>",
+    "Chand Rajendra-Nicolucci <chand@dashkite.com>"
+  ],
+  "exports": {
+    ".": {
+      "node": "./build/node/src/index.js"
+    }
+  },
+  "main": "build/node/src/index.js",
+  "files": [
+    "build/node/src"
+  ],
+  "scripts": {
+    "test": "genie test",
+    "build": "genie build"
+  },
+  "devDependencies": {
+    "@dashkite/amen": "^0.2.0",
+    "@dashkite/amen-console": "^0.0.2",
+    "@dashkite/assert": "^0.1.4",
+    "@dashkite/drn-sky": "link:../drn-sky",
+    "@dashkite/genie": "link:../genie",
+    "@dashkite/genie-clean": "link:../genie-clean",
+    "@dashkite/genie-coffee": "link:../genie-coffee",
+    "@dashkite/genie-drn": "link:../genie-drn",
+    "@dashkite/genie-yaml": "link:../genie-yaml"
+  },
+  "dependencies": {
+    "@dashkite/dolores": "link:../dolores",
+    "@dashkite/joy": "link:../joy",
+    "@dashkite/masonry-watch": "link:../masonry-watch",
+    "@dashkite/zephyr": "link:../zephyr"
+  }
+}
