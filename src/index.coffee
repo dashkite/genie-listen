@@ -6,12 +6,17 @@ import * as SNS from "@dashkite/dolores/sns"
 import * as SQS from "@dashkite/dolores/sqs"
 import configuration from "./configuration"
 
+reject = ( f ) ->
+  ( it ) ->
+    yield x for await x from it when !( await f x )
+
 Module =
 
   isLocal: do ({ local } = {}) ->
-    ({ module }) ->
+    ( events ) ->
       local ?= await Zephyr.read "package.json"
-      module?.name == local.name
+      events.some ({ content }) ->
+        content.module == local.name
 
 Listen = do ({ queue, topic } = {}) ->
 
@@ -33,6 +38,8 @@ export default ( Genie ) ->
   Genie.on "watch", Fn.flow [
     Listen.configure
     Listen.glob
-    It.reject Module.isLocal
-    It.each -> Genie.run "build!"
+    reject Module.isLocal
+    It.each -> 
+      console.log "listen: build triggered"
+      Genie.run "build"
   ]
