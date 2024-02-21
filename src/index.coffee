@@ -1,5 +1,5 @@
 import * as Fn from "@dashkite/joy/function"
-import * as It from "@dashkite/joy/iterable"
+import * as Time from "@dashkite/joy/time"
 import * as W from "@dashkite/masonry-watch"
 import Zephyr from "@dashkite/zephyr"
 import * as SNS from "@dashkite/dolores/sns"
@@ -7,8 +7,40 @@ import * as SQS from "@dashkite/dolores/sqs"
 import configuration from "./configuration"
 
 reject = ( f ) ->
-  ( it ) ->
-    yield x for await x from it when !( await f x )
+  ( rx ) ->
+    yield x for await x from rx when !( await f x )
+
+each = ( f ) ->
+  ( rx ) ->
+    await f x for await x from rx
+    return
+
+rebounce = ({ interval, cycle }, f ) -> 
+  do ({ state, last } = {}) ->
+    state = "ready"
+    ->
+      last = performance.now()
+      switch state
+        when "ready"
+          state = "waiting"
+          do ({ delay, idle } = {}) ->
+            delay = interval
+            loop
+              await Time.sleep delay
+              idle = performance.now() - last
+              break if idle > interval
+              delay = cycle
+            state = "running"
+            await do f
+            while state == "queued"
+              state = "running"
+              await do f
+            state = "ready"
+        when "running"
+          state = "queued"
+
+      return
+  
 
 Module =
 
@@ -39,7 +71,8 @@ export default ( Genie ) ->
     Listen.configure
     Listen.glob
     reject Module.isLocal
-    It.each -> 
-      console.log "listen: build triggered"
-      Genie.run "build"
+    each rebounce interval: 500, cycle: 100, -> Genie.run "build"
   ]
+
+
+
