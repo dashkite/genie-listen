@@ -48,6 +48,9 @@ importers:
       '@dashkite/genie-yaml':
         specifier: link:../genie-yaml
         version: link:../genie-yaml
+      '@dashkite/vista':
+        specifier: link:../vista
+        version: link:../vista
 
 packages:
 
