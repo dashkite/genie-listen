@@ -47,6 +47,6 @@
     "@dashkite/dolores": "link:../dolores",
     "@dashkite/joy": "link:../joy",
     "@dashkite/masonry-watch": "link:../masonry-watch",
-    "@dashkite/zephyr": "link:../zephyr"
+    "@dashkite/zephyr": "0.3.0"
   }
 }
