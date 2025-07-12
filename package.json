@@ -37,8 +37,8 @@
     "@dashkite/assert": "^0.1.4",
     "@dashkite/drn-sky": "link:../drn-sky",
     "@dashkite/genie": "^0.8.4",
-    "@dashkite/genie-clean": "link:../genie-clean",
-    "@dashkite/genie-coffee": "link:../genie-coffee",
+    "@dashkite/genie-clean": "0.2.0",
+    "@dashkite/genie-coffee": "0.2.0",
     "@dashkite/genie-drn": "link:../genie-drn",
     "@dashkite/genie-release": "^0.2.3",
     "@dashkite/genie-yaml": "link:../genie-yaml"
