@@ -46,7 +46,7 @@
   "dependencies": {
     "@dashkite/dolores": "0.1.0",
     "@dashkite/joy": "link:../joy",
-    "@dashkite/masonry-watch": "link:../masonry-watch",
+    "@dashkite/masonry-watch": "0.2.0",
     "@dashkite/zephyr": "0.3.0"
   }
 }
