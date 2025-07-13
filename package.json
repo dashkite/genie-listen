@@ -35,7 +35,7 @@
     "@dashkite/amen": "^0.2.0",
     "@dashkite/amen-console": "^0.0.2",
     "@dashkite/assert": "^0.1.4",
-    "@dashkite/drn-sky": "link:../drn-sky",
+    "@dashkite/drn-sky": "0.2.0",
     "@dashkite/genie": "^0.8.4",
     "@dashkite/genie-clean": "0.2.0",
     "@dashkite/genie-coffee": "0.2.0",
