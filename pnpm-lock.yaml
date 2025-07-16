@@ -46,8 +46,8 @@ importers:
         specifier: 0.8.0
         version: 0.8.0
       '@dashkite/genie-release':
-        specifier: ^0.2.12
-        version: 0.2.12
+        specifier: ^0.2.14
+        version: 0.2.14
       '@dashkite/genie-yaml':
         specifier: 0.7.0
         version: 0.7.0
@@ -891,8 +891,8 @@ packages:
   '@dashkite/genie-drn@0.8.0':
     resolution: {integrity: sha512-40HX7xUPCCNqOqB1ozA34GyPlP3vl/Zw/8DgMpz9lGtZOKsfIyVxMLYGhTYkHEQ+yggI6zfBluEuUaOK4btHIg==}
 
-  '@dashkite/genie-release@0.2.12':
-    resolution: {integrity: sha512-pO0uXG1ntZT+inD63YobSW84MyeHNiEuwpiDsDR5LvwVfhXlwQtZEQCVpimfHKAf14SeZ5RL8YQKgeRy1V/+Lw==}
+  '@dashkite/genie-release@0.2.14':
+    resolution: {integrity: sha512-nCl/031ZlxwIXC6ThX7xv1HBKo4GVxesKU2d3PcWDrXe7heXGC7bjmxmS3ZVqhH9zXV7T+bDOsDWOOUMH2wciA==}
 
   '@dashkite/genie-yaml@0.7.0':
     resolution: {integrity: sha512-XpliyPq/hF9BXMxBbD2wKCsNEI4ViLIzfRam2dS7lsoX4LR2fM5xPrZ/0RFdh3Tar1pugnEdbSZTDGfn3LPDwA==}
@@ -968,8 +968,8 @@ packages:
   '@dashkite/xrl@0.1.0':
     resolution: {integrity: sha512-yfqPKRZ6DCpaWv4pb4P0ypNqglBFECt7bL3myEQky3BE0zRkNLI3hbRm6POi/PX1beid6mGPK3Bkxnwe1+KBZA==}
 
-  '@dashkite/zephyr@0.2.0':
-    resolution: {integrity: sha512-l3Fm9nyOIp1yBnv4IzGOKVgo1/UucU5WLvsqAfcP2jEVlE4AgpPkODssyloxTyC3N+bhcz1DXqC/7KokI1eVjA==}
+  '@dashkite/zephyr@0.12.1':
+    resolution: {integrity: sha512-84wSTbmFpI+tydtzTkMT6FS5ybnNaL4V40fA2c235/UPx/Whg3NRr6BaVLW53+v+bHL6fDbttCTZNNLEtzTxPw==}
 
   '@dashkite/zephyr@0.3.0':
     resolution: {integrity: sha512-IcR7Ab6hPE56XZpDoCZpVQtBHBWrDffFQ97f8sQGsqAAww7w/RdchwFFQQQlp9Ke/BansVSEY14rvvzEnLFJeA==}
@@ -4040,9 +4040,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@dashkite/genie-release@0.2.12':
+  '@dashkite/genie-release@0.2.14':
     dependencies:
-      '@dashkite/zephyr': 0.2.0
+      '@dashkite/zephyr': 0.12.1
       zx: 8.7.1
 
   '@dashkite/genie-yaml@0.7.0':
@@ -4172,9 +4172,9 @@ snapshots:
     dependencies:
       '@dashkite/joy': 0.4.0
 
-  '@dashkite/zephyr@0.2.0':
+  '@dashkite/zephyr@0.12.1':
     dependencies:
-      '@dashkite/joy': 0.3.16
+      '@dashkite/joy': 0.7.0
       js-yaml: 4.1.0
 
   '@dashkite/zephyr@0.3.0':
