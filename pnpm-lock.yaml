@@ -43,8 +43,8 @@ importers:
         specifier: ^0.9.0
         version: 0.9.0
       '@dashkite/genie-drn':
-        specifier: ^0.12.11
-        version: 0.12.11
+        specifier: ^0.12.12
+        version: 0.12.12
       '@dashkite/genie-release':
         specifier: ^0.4.3
         version: 0.4.3
@@ -888,8 +888,8 @@ packages:
   '@dashkite/genie-coffee@0.9.0':
     resolution: {integrity: sha512-8Ukg3m/nQnxbmrww313lzYJJQRAxhRgbPpbqCWj7ovzS8LejoA1OGbbjRd8Ew7SdzZrJ6WYY7d08VxIbim72mw==}
 
-  '@dashkite/genie-drn@0.12.11':
-    resolution: {integrity: sha512-ZdCXFl/pcdNwc8lMadUYTPG1oWRxwqXYZ7m9Pm6Ov5yMr1BuJ15vGxCgMO8ljZLEBrAL/OH/iSVmsIBurRklBA==}
+  '@dashkite/genie-drn@0.12.12':
+    resolution: {integrity: sha512-BKk228H3Ytswtuiv/CsLSsr8/UMA4uUEHWuyK1x1xjP0NDhRavDmhB9GX2LmwRjHMCEyd5cyAoBPNPotXeIoHQ==}
 
   '@dashkite/genie-release@0.4.3':
     resolution: {integrity: sha512-9qqf7L80jmrRDPw0vhb475ed3hMDPWU782pH0bos4DdjyyObVHZePf26tgaeO9YSaFu4UC/RURxKKh+XmlqOIw==}
@@ -4054,7 +4054,7 @@ snapshots:
       - '@swc/helpers'
       - supports-color
 
-  '@dashkite/genie-drn@0.12.11':
+  '@dashkite/genie-drn@0.12.12':
     dependencies:
       '@dashkite/drn': 0.12.11
       '@dashkite/drn-loader': 0.11.9
