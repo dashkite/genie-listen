@@ -1,6 +1,6 @@
 {
   "name": "@dashkite/genie-listen",
-  "version": "0.10.20",
+  "version": "0.10.21",
   "description": "Listen for build events",
   "keywords": [],
   "homepage": "https://github.com/dashkite/genie-listen#readme",
